@@ -27,5 +27,10 @@ function isPalindrome(word) {
   return word === reversed;
 }
 
+function findPostById(posts, id){
+    const post = posts.find(p => p.id === id);
+    return post
+}
 
-module.exports = {getInitials, createSlug, average, isPalindrome}
+
+module.exports = {getInitials, createSlug, average, isPalindrome, findPostById}

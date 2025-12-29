@@ -1,4 +1,4 @@
-const {getInitials, createSlug, average, isPalindrome} = require("./test-vari.js")
+const {getInitials, createSlug, average, isPalindrome, findPostById} = require("./test-vari.js")
 
 //🏆 Snack 1
 //Creare un test che verifichi la seguente descrizione:
@@ -55,4 +55,37 @@ test("La funzione isPalindrome verifica se una stringa è un palindromo.",() => 
 test("La funzione createSlug lancia un errore se il titolo è vuoto o non valido.",() => {
     expect(() => createSlug(" ")).toThrow()
     expect(() => createSlug("dfsasfsafasas")).toThrow()
+})
+
+//🏆 Snack 7
+//Crea un array di oggetti posts, in cui ogni oggetto ha le proprietà id, title e slug.
+//Creare un test che verifichi le seguenti descrizioni:
+//👉 "La funzione findPostById restituisce il post corretto dato l’array di post e l’id"
+//Creare uno o più test aggiuntivi che controllino che la struttura dati passati sia conforme (ogni post ha le proprietà id, title e slug, viene passato un id numerico).
+
+const posts = [
+  {
+    id: 1,
+    title: "Introduzione a JavaScript",
+    slug: "introduzione-a-javascript"
+  },
+  {
+    id: 2,
+    title: "Guida alle Arrow Functions",
+    slug: "guida-alle-arrow-functions"
+  },
+  {
+    id: 3,
+    title: "Cos'è il DOM",
+    slug: "cos-e-il-dom"
+  },
+  {
+    id: 4,
+    title: "Async e Await in JavaScript",
+    slug: "async-e-await-in-javascript"
+  }
+];
+
+test("La funzione findPostById restituisce il post corretto dato l’array di post e l’id",() => {
+    expect(findPostById(posts, 2)).toEqual({id: 2, title: "Guida alle Arrow Functions", slug: "guida-alle-arrow-functions"})
 })
