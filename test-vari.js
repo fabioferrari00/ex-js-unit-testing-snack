@@ -2,4 +2,9 @@ function getInitials(string){
     return string.charAt(0)
 }
 
-module.exports = {getInitials}
+function createSlug(string){
+    return string.toLowerCase();
+}
+
+
+module.exports = {getInitials, createSlug}
