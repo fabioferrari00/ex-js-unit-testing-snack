@@ -7,4 +7,11 @@ function createSlug(string){
 }
 
 
-module.exports = {getInitials, createSlug}
+function average(arrayNum){
+    const arraySum = arrayNum.reduce((acc,num) => acc + num, 0)
+
+    return arraySum / arrayNum.length
+}
+
+
+module.exports = {getInitials, createSlug, average}
