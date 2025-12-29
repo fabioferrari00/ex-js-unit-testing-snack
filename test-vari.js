@@ -3,6 +3,15 @@ function getInitials(string){
 }
 
 function createSlug(string){
+
+    if(string === " "){
+        throw new Error('Inserire una parola')
+    }
+
+    if(!string.includes(" ")){
+        throw new Error('La parola deve contenere degli spazi')
+    }
+
     return string.toLowerCase().replaceAll(" ","-");
 }
 
