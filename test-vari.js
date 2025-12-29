@@ -13,5 +13,10 @@ function average(arrayNum){
     return arraySum / arrayNum.length
 }
 
+function isPalindrome(word) {
+  const reversed = word.split('').reverse().join('');
+  return word === reversed;
+}
 
-module.exports = {getInitials, createSlug, average}
+
+module.exports = {getInitials, createSlug, average, isPalindrome}
