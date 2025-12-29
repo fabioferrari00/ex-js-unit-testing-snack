@@ -11,5 +11,13 @@
   "license": "ISC",
   "devDependencies": {
     "jest": "^30.2.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabioferrari00/ex-js-unit-testing-snack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fabioferrari00/ex-js-unit-testing-snack/issues"
+  },
+  "homepage": "https://github.com/fabioferrari00/ex-js-unit-testing-snack#readme"
 }
