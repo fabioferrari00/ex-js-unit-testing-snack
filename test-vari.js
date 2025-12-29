@@ -3,7 +3,7 @@ function getInitials(string){
 }
 
 function createSlug(string){
-    return string.toLowerCase();
+    return string.toLowerCase().replaceAll(" ","-");
 }
 
 
